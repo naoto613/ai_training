@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>MyPortfolio</title>
+  <meta name="description" content="This site is my portfolio." />
+  <link rel="icon" href="../static/images/favicon.png" />
+  <link rel="stylesheet" href="../static/styles/loader.css" />
+  <script src="../static/scripts/vendors/pace.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Kameron:400,700|Noto+Sans+JP&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../static/styles/vendors/bootstrap-reboot.css" />
+  <link rel="stylesheet" href="../static/styles/vendors/swiper.min.css" />
+  <link rel="stylesheet" href="../static/styles/style.css" />
+</head>
+
+<body>
+  <div id="global-container">
+    <div id="container">
+      <div class="mobile-menu__cover"></div>
+      <div class="nav-trigger"></div>
+      <header class="header">
+        <div class="header__inner appear up">
+          <div class="logo item">
+            <img src="../static/images/logo.svg" alt="" class="logo__img" />
+            <span class="logo__stay">My</span>
+            <span class="logo__world">Portfolio</span>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__ul">
+              <li class="header__li item">
+                <a href="{% url 'home' %}">Home</a>
+              </li>
+              <li class="header__li item">
+                <a href="{% url 'introduction' %}">About Me</a>
+              </li>
+              <li class="header__li item">
+                <a class="btn filled " href="{% url 'list' %}">AI Products</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="mobile-menu__btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+      <div id="content">
+        <div class="hero">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="hero__title">AI Products</div>
+                <img src="../static/images/machines.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <div class="hero__title">dogs</div>
+                <img src="../static/images/dogs.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <div class="hero__title">travel</div>
+                <img src="../static/images/travel.jpg" alt="" />
+              </div>
+            </div>
+            <div class="hero__footer">
+              <img class="hero__downarrow" src="../static/images/arrow.svg" />
+              <span class="hero__scrolltext">scroll</span>
+            </div>
+          </div>
+        </div>
+        <div id="main-content">
+          <aside class="side left">
+            <div class="side__inner">
+              <a class="fb icon tween-animate-title" href="https://www.facebook.com/naoto.fujii.52">Facebook</a>
+            </div>
+          </aside>
+          {% block content %}
+          {% endblock content %}
+          <aside class="side right">
+            <div class="side__inner">
+              <span class="tween-animate-title">&copy;My Portfolio</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <footer class="footer appear ups">
+        <div class="logo item">
+          <img src="../static/images/logo.svg" alt="" class="logo__img" />
+          <span class="logo__stay">My</span>
+          <span class="logo__world">Portfolio</span>
+        </div>
+        <nav class="footer__nav">
+          <ul class="footer__ul">
+            <li class="footer__li item">
+              <a href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="footer__li item">
+              <a href="{% url 'introduction' %}">About Me</a>
+            </li>
+            <li class="footer__li item">
+              <a href="{% url 'list' %}">AI Products</a>
+            </li>
+          </ul>
+          <div class="footer__copyright">
+            &copy; My Portfolio
+          </div>
+        </nav>
+      </footer>
+    </div>
+    <nav class="mobile-menu">
+      <div class="logo">
+        <img src="../static/images/logo.svg" alt="" class="logo__img" />
+        <span class="logo__stay">My</span>
+        <span class="logo__world">Portfolio</span>
+      </div>
+      <ul class="mobile-menu__main">
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="{% url 'home' %}">
+            <span class="main-title">Home</span>
+            <span class="sub-title">ホーム画面に戻る</span>
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="{% url 'introduction' %}">
+            <span class="main-title">About Me</span>
+            <span class="sub-title">自己紹介</span>
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="{% url 'list' %}">
+            <span class="main-title">AI Products</span>
+            <span class="sub-title">AIアプリ一覧</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <script src="../static/scripts/vendors/swiper.min.js"></script>
+  <script src="../static/scripts/vendors/TweenMax.min.js"></script>
+  <script src="../static/scripts/libs/hero-slider.js"></script>
+  <script src="../static/scripts/vendors/scroll-polyfill.js"></script>
+  <script src="../static/scripts/libs/scroll.js"></script>
+  <script src="../static/scripts/libs/text-animation.js"></script>
+  <script src="../static/scripts/libs/mobile-menu.js"></script>
+  <script src="../static/scripts/main.js"></script>
+</body>
+
+</html>

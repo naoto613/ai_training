@@ -1,0 +1,119 @@
+{% extends 'base_main.html' %}
+{% block content %}
+<main>
+   <section class="news">
+      <div class="news__inner">
+         <div class="news__img cover-slide">
+            <img class="img-zoom" src="../static/images/machine.jpg" alt="" />
+         </div>
+         <div class="news__texts appear left">
+            <div class="news__texts-inner">
+               <div class="introduction__title main-title item">
+                  <span class="purple">New</span> <span>AI product</span>
+               </div>
+               <div class="introduction__sub sub-title item">New!</div>
+               <div class="introduction__description item">
+                  <p>
+                     今回はチャットボットアプリを<br />作ってみました。
+                  </p>
+                  <p>以下のボタンから移動します。</p>
+               </div>
+               <div class="news__btn item">
+                  <a href="{% url 'chatbot' %}" class="btn filled" tabindex="-1" role="button"
+                     aria-disabled="true">最新のアプリを試す</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="dogs">
+      <div>
+         <h2 class="main-title tween-animate-title">My favorite dogs</h2>
+         <p class="sub-title tween-animate-title">あなたはどの犬が好き？</p>
+      </div>
+      <div class="dogs__inner">
+         <div class="dogs__item">
+            <div class="cover-slide hover-darken inview">
+               <a
+                  href="https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%A7%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BB%E3%82%B3%E3%83%BC%E3%82%AE%E3%83%BC">
+                  <div href="{% url 'home' %}" class="bg-img-zoom img-bg50"
+                     style="background-image: url(../static/images/corgi.jpg);"></div>
+               </a>
+            </div>
+            <p class="dogs_title">No.1 コーギー</p>
+         </div>
+         <div class="dogs__item">
+            <div class="cover-slide hover-darken inview">
+               <a href="https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%BC%E3%83%89%E3%83%AB">
+                  <div class="bg-img-zoom img-bg50" style="background-image: url(../static/images/toy_poodle.jpg);">
+                  </div>
+               </a>
+            </div>
+            <p class="dogs_title">No.2 トイプードル</p>
+         </div>
+         <div class="dogs__item">
+            <div class="cover-slide hover-darken inview">
+               <a href="https://ja.wikipedia.org/wiki/%E6%9F%B4%E7%8A%AC">
+                  <div class="bg-img-zoom img-bg50" style="background-image: url(../static/images/Shiba.jpg);"></div>
+               </a>
+            </div>
+            <p class="dogs_title">No.3 柴犬</p>
+         </div>
+         <div class="dogs__item">
+            <div class="cover-slide hover-darken inview">
+               <a href="https://ja.wikipedia.org/wiki/%E3%83%81%E3%83%AF%E3%83%AF">
+                  <div class="bg-img-zoom img-bg50" style="background-image: url(../static/images/chihuahua.jpg);">
+                  </div>
+               </a>
+            </div>
+            <p class="dogs_title">No.4 チワワ</p>
+         </div>
+         <div class="dogs__item">
+            <div class="cover-slide hover-darken inview">
+               <a
+                  href="https://ja.wikipedia.org/wiki/%E3%83%95%E3%83%AC%E3%83%B3%E3%83%81%E3%83%BB%E3%83%96%E3%83%AB%E3%83%89%E3%83%83%E3%82%B0">
+                  <div class="bg-img-zoom img-bg50" style="background-image: url(../static/images/French_bulldog.jpg);">
+                  </div>
+               </a>
+            </div>
+            <p class="dogs_title">No.5 フレンチブルドッグ</p>
+         </div>
+         <div class="dogs__item">
+            <div class="cover-slide hover-darken inview">
+               <a href="https://ja.wikipedia.org/wiki/%E3%83%9D%E3%83%A1%E3%83%A9%E3%83%8B%E3%82%A2%E3%83%B3">
+                  <div class="bg-img-zoom img-bg50" style="background-image: url(../static/images/pomeranian.jpg);">
+                  </div>
+               </a>
+            </div>
+            <p class="dogs_title">No.6 ポメラニアン</p>
+         </div>
+      </div>
+   </section>
+   <section class="popular">
+      <div class="popular__header">
+         <h2 class="main-title tween-animate-title">My favorite countries</h2>
+         <p class="sub-title tween-animate-title">海外旅行に行きたいところ</p>
+      </div>
+      <div class="popular__inner appear up">
+         <div class="popular__container">
+            <div class="popular__item item">
+               <div class="popular__img"><img src="../static/images/Germany.jpg" alt=""></div>
+               <div class="popular__title">ドイツ</div>
+            </div>
+            <div class="popular__item item">
+               <div class="popular__img"><img src="../static/images/France.jpg" alt=""></div>
+               <div class="popular__title">フランス</div>
+            </div>
+            <div class="popular__item item">
+               <div class="popular__img"><img src="../static/images/Spain.jpg" alt=""></div>
+               <div class="popular__title">スペイン</div>
+            </div>
+            <div class="popular__item item">
+               <div class="popular__img"><img src="../static/images/Australia.jpg" alt=""></div>
+               <div class="popular__title">オーストラリア</div>
+            </div>
+         </div>
+         </class>
+   </section>
+</main>
+{% endblock content %}

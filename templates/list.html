@@ -1,0 +1,46 @@
+{% extends 'base_main.html' %} {% block content %}
+<section class="talk">
+  <div class="talk__inner">
+    <div class="talk__texts">
+      <div class="talk__texts-inner">
+        <div class="container">
+          <div class="talk__title main-title item">
+            <h1 class="display-4">
+              <span class="purple">自作</span>
+              <span>AIアプリ</span>
+            </h1>
+          </div>
+          <p class="lead">AIアプリを作ってみました！</p>
+        </div>
+      </div>
+      <section class="item_green">
+        <div class="item_green__inner">
+          <h2>犬顔・猫顔・猿顔診断アプリ</h2>
+          <a href="{% url 'facejudge' %}" class="btn cover-3d item" tabindex="-1" role="button"
+            aria-disabled="true">やってみる</a>
+        </div>
+      </section>
+      <section class="item_orange">
+        <div class="item_orange__inner">
+          <h2>格言生成アプリ</h2>
+          <a href="{% url 'kakugen' %}" class="btn float item" tabindex="-1" role="button"
+            aria-disabled="true">やってみる</a>
+        </div>
+      </section>
+      <section class="item_blue">
+        <div class="item_blue__inner">
+          <h2>チャットボットアプリ</h2>
+          <a href="{% url 'chatbot' %}" class="btn slide-bg item" tabindex="-1" role="button"
+            aria-disabled="true">やってみる</a>
+        </div>
+      </section>
+      <section class="item_yellow">
+        <div class="item_yellow__inner">
+          <h2>自動機械学習アプリ</h2>
+          <a href="{% url 'wait' %}" class="btn shadow item" tabindex="-1" role="button" aria-disabled="true">やってみる</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+{% endblock content %}

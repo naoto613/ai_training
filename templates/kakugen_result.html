@@ -1,0 +1,30 @@
+{% extends 'base_application.html' %}
+
+{% block header %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-5">格言生成アプリ</h1>
+        <p class="lead">本日の格言を生成します</p>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class='container'>
+    <div class="alert alert-success" role="alert">
+        <p2>本日の格言</p2>
+        <br>
+        <br>
+        <br>
+        <h2>
+            <font face="ＭＳ Ｐ明朝"><b>{{ sentence }}</b></font>
+        </h2>
+        <br>
+        <br>
+        <br>
+        <a href="{% url 'kakugen_result' %}" class="btn btn-primary" role="button">もう一度格言生成！</a>
+        <a href="{% url 'list' %}" class="btn btn-primary" role="button" aria-pressed="true">AIアプリ選択画面に戻る</a>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,61 @@
+{% extends 'base_application.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% load widget_tweaks %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'talk.css'%}">
+</link>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-5">チャットボットアプリ</h1>
+        <p class="lead">SNSでのやり取りをもとに作成したチャットボット<br>好きな言葉を入れてみよう</p>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="alert alert-success" role="alert">
+        <form action="" method="post">{% csrf_token %}
+            <h2>雑談チャットボット</h2>
+            <div class="form-group row my-4">
+                <label class="col-lg-1 col-form-label">
+                    <h4>{{form.texttwo.label}}</h4>
+                </label>
+                <div class="col-lg-6">
+                    {{form.texttwo|add_class:"form-control"}}
+
+                </div>
+
+                <div class="col-lg-2">
+                    <button type="submit" class="btn btn-primary">送信する</button>
+                    <a href="{% url 'back' %}" class="btn btn-primary" role="button" aria-pressed="true">戻る</a>
+                </div>
+            </div>
+            <div id="talkarea">
+                {% for talktxt in talktxts reversed %}
+                {% if talktxt.k == 'b' %}
+                <div class="form-group row my-2">
+                    <div class="col-lg-1"><img src="{% static "images/phone_oldman1_smile.png"%}" width=50 /></div>
+                    <div class="p-3 m-1 col-lg-5 bg-info text-white font-weight-bold">
+                        {{ talktxt.txt }}
+                    </div>
+                    <div class="col-lg-4"></div>
+                </div>
+                {% else %}
+                <div class="form-group row my-2">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-1"><img src="{% static "images/phone_oldwoman1_smile.png"%}" width=50 /></div>
+                    <div class="p-3 m-1 col-lg-5 bg-success text-white font-weight-bold">
+                        {{ talktxt.txt }}
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}

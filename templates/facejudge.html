@@ -1,0 +1,32 @@
+{% extends 'base_application.html' %}
+
+{% block header %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-5">犬顔、猫顔、猿顔診断アプリ</h1>
+        <p class="lead">あなたは何系の顔でしょう？</p>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class='container'>
+    <div class="alert alert-success" role="alert">
+        <p2> 画像ファイルを選択して推定ボタンをクリックしてください。</p2>
+        <form action="{% url 'predict' %}" method='post' class='form' enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <div class="custom-file">
+                    {{ form.image }}
+                    <label class="custom-file-label" form="customFile">
+                        推定したいファイルを選択してください。
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">推定する！</button>
+        </form>
+        <a href="{% url 'back' %}" class="btn btn-primary" role="button" aria-pressed="true">戻る</a>
+    </div>
+</div>
+{% endblock content %}
