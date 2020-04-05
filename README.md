@@ -1,5 +1,5 @@
 # my_portfolio
-This is my portfolio site. I tried to make AI products. Let's enjoy them.
+This is my portfolio site. I tried to make AI products. Please see them.
 
 # Description
 This site was made by Django. 
