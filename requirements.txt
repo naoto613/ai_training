@@ -2,7 +2,7 @@ asn1crypto==0.24.0
 backports.functools-lru-cache==1.6.1
 beautifulsoup4==4.8.2
 cryptography==2.1.4
-Django==1.11.26
+Django==2.2.24
 django-bootstrap4==1.1.1
 django-widgets-improved==1.5.0
 enum34==1.1.6
